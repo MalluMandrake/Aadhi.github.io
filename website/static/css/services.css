@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main
+{
+    width: 100%;
+    background-image: url('../image/m1.jpg');
+    background-position: center;
+    background-size:cover;
+    height: 109vh;
+}
+.navbar
+{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+.icon
+{
+    width: 400px;
+    height: 100px;
+    float: left;
+}
+.logo
+{
+    color: #f7efefdc;
+    padding-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 20px;
+    font-size: 40px;
+    float: left;
+}
+.logo span{
+    color: #ff7200;
+}
+.menu{
+    width: 600px;
+    float: left;
+    height: 70px;
+    align-items: center;
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+    margin-left: 90px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+ul li a{
+    text-decoration: none;
+    color: rgb(30, 7, 238);
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    list-style: none;
+
+}
+ul li a:hover{
+    color:#0b0b0b;
+}
+ .logout{
+    ;
+}
+.content{
+    width: 50% ;
+    height: 750px;
+    justify-content: center;
+    text-decoration: none;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(5, 52, 241, 0.938);
+    transition: 0.3s;
+    width: 40%;
+    height: 200px;
+    padding-left: 120px;
+    margin-left: 350px;
+    margin-top: 10%;
+    color: #e4e6eb;
+    font-size: larger;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 91, 248, 0.97);
+  }
+  
+  .container {
+    padding-top: 10px;
+    padding: 2px 16px;
+    border-radius: 10px;
+    text-align: center;
+    
+
+  }
+  .container p {
+
+    color: #000;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 100px;
+  }
+  .upload{
+    padding: 10px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 100px;
+    cursor: pointer;
+    color: #000;
+    font-size: 16px; background:white; border-radius: 50px;
+    box-shadow: 5px 5px 10px black;
+    width: 350px;
+    outline: none;
+    margin-bottom: 20px;
+    position: relative;
+
+  }
+  .btn {
+    width: 150px;
+    height: 40px;
+    background:#ff7200;
+    border: none;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    margin-right: 100px;
+  }

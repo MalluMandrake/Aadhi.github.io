@@ -1,0 +1,74 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.section-margin {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+
+a{
+    text-decoration: none;
+}
+body{
+    background-image: url('../image/m1.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;       
+    background-color:rgb(14, 124, 234);
+}
+.Register
+{
+    font-family: 'Times New Roman';
+    width: 400px;
+    height: 280px;
+    color: rgb(7, 26, 236);
+    position: absolute;
+    top: 100px;
+    left: 450px;
+    border-radius: 10px;
+    padding: 25px;
+   
+}
+h1{
+    color: rgb(10, 25, 235);
+    margin: 20px;
+}
+
+input[type=email]
+{
+    display: inline-block;
+    width: 100%;
+    height: 25px;
+    margin-bottom: 10px;
+}
+input[type=tel]
+{
+    display: inline-block;
+    width: 100%;
+    height: 25px;
+    margin-bottom: 10px;
+}
+input[type=password]
+{
+    display: inline-block;
+    width: 100%;
+    height: 25px;
+    margin-bottom: 10px;
+}
+.button
+{
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+    text-decoration: none;
+    border-radius: 0px;
+    background-color: orange;
+    border: none;
+    font-style: oblique;
+    margin-top: 10px;
+    color: white;
+}

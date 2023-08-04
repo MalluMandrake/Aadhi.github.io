@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/home.css') }} ">
+        
+    </head>
+    <body>
+        <div class="main">
+            {% if message %}
+            <h2>{{message}}</h2>
+            {% endif %}
+            
+            <div class="navbar">
+                <div  class=icon >
+                    <h2 class="logo">XYZ <span></span></h2>
+
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="{{url_for('home')}}">Home</a></li>
+                        <li><a href="{{url_for('about')}}">About</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="content">
+                <h1>Customer <br> <span>Segmentation</span></h1>
+              
+                
+
+                <p class="par"> Identifying category of customers and predicting <br>which types of products should stock up based on customer’s needs.</p>
+                <button class="btn"><a href="{{url_for('signup')}}" >Join Us</a></button>
+
+                
+                </div>
+                    <div class="login" >
+                        <form method="post" action='/login'>
+                        <h1 >Login Here</h1>
+                        <input type="Email" name="email" id="email" placeholder="Email" > <br>
+                         <input type="password" name="password" id="password" placeholder="Password"><br>
+                        <button class="report">LOGIN</button>
+                        {% for message in get_flashed_messages() %}
+                        <h4 class="invalid">{{ message }}</h4>
+                         {% endfor %}
+                        <p>Don't have an account</p>
+                         <a href="{{url_for('signup')}}">Signup here</a>
+
+                         
+
+                        </form>
+                        
+                    </div>
+                    
+        
+               
+                
+                </div>
+                
+           </div>
+           {% if message %}
+          <p class="invalid">{{message}}</p>
+          {% endif %}
+          {% if messageSuccess %}
+          <p class="invalid">{{message}}</p>
+          {% endif %}
+        </div>
+    </body>
+    
+
+</html>

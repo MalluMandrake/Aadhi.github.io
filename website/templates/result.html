@@ -1,0 +1,212 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<script>
+    function getData() {
+        const new_data = document.getElementById('dataResult').innerHTML;
+        const new_data_object = JSON.parse(new_data)
+        const labels = Object.keys(new_data_object)
+        labels.pop()
+        const count = Object.values(new_data_object)
+        count.pop()
+        return { labels: labels, count: count }
+    }
+</script>
+<div class="container section-margin">
+    <p hidden id="dataResult">{{data}}</p>
+   
+   
+    <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+
+        <a class="navbar-brand" href="#">Result</a>
+       
+        <ul class="nav nav-pills">
+            
+            <li class="nav-item">
+               
+                <a class="nav-link" href="#dounoughtchart">Doughnut Chart</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading2">Bar Chart</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading3">Line Chart</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('home') }}">Logout</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container section-margin">
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example"
+            tabindex="0">
+            
+
+           <h4> According to inputted dataset most visted customer comes under the category of <b class="rah">{{cls1}} </b> so that 
+           you can instock the following items it might increases your sales because those products have high demand on your shop <p class="rah">{{item1}} </p>
+           Least visted customer comes under the category of <b class="rah">{{cls2}} </b> so that you can reduce the spending on following items<p class="rah">{{item2}} </p> </h4>
+            
+<!--       
+    <h4 class="rah">{{ cls }}</h4>      <p class="para"> Kindly include the following products to boost your sales  as below </p>
+            <h5 class="sub">{{ cls2 }}</h5>
+
+            <h4 class="rah">{{ cls3 }}</h4>
+            <p class="para"> Kindly include the following products to boost your sales  as below </p>
+            <h5 class="sub">{{ cls4 }}</h5> -->
+
+            <br>
+
+            <center>
+                <h4 id="dounoughtchart">Doughnut Chart</h4>
+            </center>
+            <div>
+                <center>
+                    <canvas id="Doughnut"></canvas>
+                </center>
+            </div>
+            <script>
+                const result = getData();
+                const data = {
+                    labels: result.labels,
+                    datasets: [{
+                        label: 'My First Dataset',
+                        data: result.count,
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(54, 162, 235)',
+                            'rgb(255, 205, 86)',
+                            'rgb(229, 54, 16)',
+                            'rgb(187, 229, 16)',
+                            'rgb(16, 229, 168)',
+                            'rgb(16, 65, 229)',
+                            'rgb(11, 15, 28)',
+                            'rgb(157, 73, 209)',
+                            'rgb(209, 73, 151)'
+                        ],
+                        hoverOffset: 4
+                    }]
+                };
+
+                const config1 = {
+                    type: 'doughnut',
+                    data: data,
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            }
+                        }
+                    },
+                };
+
+                var doughnutchart = new Chart(
+                    document.getElementById('Doughnut'),
+                    config1
+                );
+            </script>
+            <center>
+                <h4 id="scrollspyHeading2">Bar Chart</h4>
+            </center>
+            <div>
+                <center>
+                    <canvas id="Bar"></canvas>
+                </center>
+            </div>
+            <script>
+                const result2 = getData();
+                console.log(result2)
+                const data2 = {
+                    labels: result2.labels,
+                    datasets: [{
+                        label: 'Bar Chart',
+                        data: result2.count,
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(54, 162, 235)',
+                            'rgb(255, 205, 86)',
+                            'rgb(229, 54, 16)',
+                            'rgb(187, 229, 16)',
+                            'rgb(16, 229, 168)',
+                            'rgb(16, 65, 229)',
+                            'rgb(11, 15, 28)',
+                            'rgb(157, 73, 209)',
+                            'rgb(209, 73, 151)'
+                        ],
+                        borderColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(54, 162, 235)',
+                            'rgb(255, 205, 86)',
+                            'rgb(229, 54, 16)',
+                            'rgb(187, 229, 16)',
+                            'rgb(16, 229, 168)',
+                            'rgb(16, 65, 229)',
+                            'rgb(11, 15, 28)',
+                            'rgb(157, 73, 209)',
+                            'rgb(209, 73, 151)'
+                        ],
+                        borderWidth: 1
+                    }]
+                };
+
+                const config2 = {
+                    type: 'bar',
+                    data: data2,
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    },
+                };
+
+                var barChart = new Chart(
+                    document.getElementById('Bar'),
+                    config2
+                );
+            </script>
+            <center>
+                <h4 id="scrollspyHeading3" style="margin-top: 50px;">Line Chart</h4>
+            </center>
+            <div>
+                <center>
+                    <canvas id="Line"></canvas>
+                </center>
+            </div>
+            <script>
+                const result3 = getData();
+                console.log(result3)
+                const data3 = {
+                    labels: result3.labels,
+                    datasets: [{
+                        label: 'Line Chart',
+                        data: result3.count,
+                        fill: false,
+                        borderColor: 'rgb(75, 192, 192)',
+                        tension: 0.1
+                    }]
+                };
+
+                const config3 = {
+                    type: 'line',
+                    data: data3,
+                };
+
+                var PolarChart = new Chart(
+                    document.getElementById('Line'),
+                    config3
+                );
+            </script>
+            
+        </div>
+        
+    </div>
+  
+
+   
+</div>
+
+
+
+{% endblock %}

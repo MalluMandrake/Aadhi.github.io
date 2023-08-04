@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.main
+{
+    width: 100%;
+    background:linear-gradient(to top,rgba(247, 244, 244, 0.8)50%,rgba(230, 227, 227, 0.8)50% );
+    background-image: url('../image/m0.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 109vh;
+}
+.navbar
+{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+.icon
+{
+    width: 400px;
+    height: 100px;
+    float: left;
+}
+.logo
+{
+    color: #f7efefdc;
+    padding-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 20px;
+    font-size: 40px;
+    float: left;
+}
+.logo span{
+    color: #ff7200;
+}
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+    align-items: center;
+}
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+    margin-left: 90px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+ul li a{
+    text-decoration: none;
+    color: rgb(24, 24, 24);
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+ul li a:hover{
+    color:#ff7200;
+}
+.content{
+    width: 1200px;
+    margin: auto;
+    height: auto;
+    color: #0a0a0ae5;
+    position: relative;
+}
+.content span{
+    color: #34568b;
+   
+}
+.content .par{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    line-height: 30px;
+    letter-spacing: 1.5px;
+
+}
+.content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    margin-top: 15%;
+    letter-spacing: 2px;
+}
+.btn{
+    width: 150px;
+    height: 40px;
+    background:#ff7200;
+    border: none;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+.content .btn a{
+    text-decoration: none;
+    color: #000;
+    transition: o0.3s ease;
+}
+.btn:hover{
+   background-color: #fff;
+}
+
+.login{
+    width: 250px;
+    height: 280px;
+    background:linear-gradient(to top, rgba(79, 78, 78, 0.8)50%,rgba(79, 78, 78, 0.8)50%);
+    position: absolute;
+    top: 150px;
+    left:870px ;
+    border-radius: 10px;
+    padding: 25px;
+
+}
+.login h1{
+    color: white;
+    text-align: center;
+}
+.login input{
+    width: 240px;
+    height: 35px;
+    color:#fff;
+    background: transparent;
+    border: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #fff;
+    letter-spacing: 3px;
+    font-size:small;
+}
+.login .report{
+    width: 200px;
+    background-color: #f67104;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+
+}
+.login p{
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 50px;
+    color: #fff;
+}
+.login a{
+    width: 100px;
+    margin-top: 20px;
+    margin-left: 90px;
+   color: #2595db;
+
+
+}
+.invalid {
+    color: rgb(167, 10, 10);
+    text-align: center;
+}

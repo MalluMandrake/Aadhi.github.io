@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.main
+{
+    width: 100%;
+    background-image: url('../image/m2.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 109vh;
+}
+.navbar
+{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+.icon
+{
+    width: 400px;
+    height: 100px;
+    float: left;
+}
+.logo
+{
+    color: #b1adaddc;
+    padding-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 20px;
+    font-size: 40px;
+    float: left;
+}
+.logo span{
+    color: #ff7200;
+}
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+    align-items: center;
+}
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+    margin-left: 90px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+ul li a{
+    text-decoration: none;
+    color: rgb(17, 81, 218);
+    margin-left: 40em;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+ul li a:hover{
+    color:#3409f5;
+}
+.about{
+    width: 250px;
+    height: 280px;
+    background:linear-gradient(to top, rgba(79, 78, 78, 0.8)50%,rgba(79, 78, 78, 0.8)50%);
+    position: absolute;
+    top: 150px;
+    left:870px ;
+    border-radius: 10px;
+    padding: 25px;
+
+}
+.para{
+    margin-top: 10%;
+    margin-left: 40px;
+    color: rgb(11, 11, 11);
+    font-size: 20px;
+}
+.pros{
+    margin-top: 30px;
+    color: greenyellow;
+}
+.p1{
+    margin-left: 10em;
+    margin-top: 10px;
+    color: bisque;
+}
+.p2{
+    margin-left: 10em;
+    margin-top: 10px;
+    color: bisque;
+}
+.p3{
+    margin-left: 10em;
+    margin-top: 10px;
+    color: bisque;
+}

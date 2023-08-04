@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       
+        <title>registration</title>
+        <link rel="stylesheet" href=" {{ url_for('static',filename='css/registration.css') }} ">
+
+    </head>
+    
+    <body>
+        
+        <div class="Register">
+            
+            <Form method='POST'action='/register'>
+                <h1 style="text-align: center;">Registration</h1>
+                <label for="Email"> Email</label>
+            <input type="email" name="email"  id="email" placeholder="xyz@gmail.com" required >
+            <br>
+            <label for="Phone">Phone Number</label>
+            <input type="tel" name="phone"  id="phone" placeholder="+44" required >
+            <br>
+            <label for="password">Password</label> 
+            <input type="password" name="password"  id="password" required>
+            <p>Already have an account <a href= "{{url_for('home')}}" > Log in </a> </p>
+            
+            <button class="button"> REGISTER</button>
+            </Form>
+        </div>
+       
+    </div>
+    </body>
+    
+    
+
+
+</html>
